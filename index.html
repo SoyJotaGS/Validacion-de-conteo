@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis de conteo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="content-container">
+            <iframe id="web-view"></iframe>
+            <div id="image-view-container">
+                <img id="image-view" />
+            </div>
+            <video id="video-view" controls></video>
+        </div>
+        <div id="controls-container">
+            <button id="loadButton">Cargar archivo Excel</button>
+            <div id="info-container">
+                <label id="vehicleLabel"></label>
+                <label id="Grupo"></label>
+                <label id="Alerta"></label>
+                <label id="Fecha"></label>
+                <label id="hora"></label>
+                <label id="velocidad"></label>
+            </div>  
+            <button class="optionButton">Verdadero</button>
+            <button class="optionButton">Falso</button>
+            <button class="optionButton">No carga video</button>
+            <div class="counter" id="counterLabel"></div>
+            <button id="downloadButton" style="display:none;">Descargar Resultados</button>
+        </div>
+    </div>
+    <input type="file" id="fileInput" accept=".xlsx, .xls" style="display:none;">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

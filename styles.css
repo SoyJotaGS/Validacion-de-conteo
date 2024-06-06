@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #2e2e2e; /* Color de fondo oscuro */
+    color: #e0e0e0; /* Color del texto claro */
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
+
+#content-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    border-right: 1px solid #555; /* Color del borde */
+    overflow: hidden;
+    position: relative;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+#info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #3b3b3b; /* Fondo del contenedor de información */
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
+
+#controls-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los botones horizontalmente */
+    justify-content: center; /* Centrar los botones verticalmente */
+}
+
+button {
+    background-color: #710303;
+    color: white;
+    font: 12pt Arial;
+    height: 50px;
+    margin: 10px 0;
+    width: 80%; /* Ajustar el ancho del botón */
+    cursor: pointer;
+    border: none; /* Quitar borde del botón */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+button:hover {
+    background-color: #710303;
+}
+
+iframe, #image-view, #video-view {
+    width: 100%;
+    height: calc(100% - 150px); /* Ajustar la altura para dejar espacio para las etiquetas */
+    position: relative;
+    top: 0;
+    left: 0;
+    border: none;
+}
+
+iframe {
+    display: none;
+}
+
+#image-view-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 150px); /* Ajustar la altura para dejar espacio para las etiquetas */
+}
+
+#video-view {
+    display: none;
+}
+
+label {
+    font: 12pt Arial;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.counter {
+    font: 12pt Arial;
+    text-align: center;
+}
