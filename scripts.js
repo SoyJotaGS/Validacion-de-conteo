@@ -113,7 +113,12 @@ optionButtons.forEach(button => {
 });
 
 document.getElementById('downloadButton').addEventListener('click', () => {
-    const worksheet = XLSX.utils.json_to_sheet(df);
+    const worksheet = XLSX.utils.json_to_sheet(df.map(record => {
+        return {
+            ...record,
+            'Etiqueta': `=HIPERVINCULO("${record['Etiqueta']}")`
+        };
+    }));
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
     XLSX.writeFile(workbook, 'resultados.xlsx');
